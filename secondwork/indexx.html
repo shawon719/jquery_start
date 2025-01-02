@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $(".one").hide();
+        });
+        $("#show").click(function () {
+          $(".one").show();
+        });
+
+        // this is for second div
+        $("#hide").click(function () {
+          $(".two").hide();
+        });
+        $("#show").click(function () {
+          $(".two").show();
+        });
+      });
+    </script>
+    <style>
+      .one {
+        width: 50%;
+        height: 40px;
+        margin: 10px;
+        background-color: blue;
+      }
+      .two {
+        width: 50%;
+        height: 40px;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <p>If you click on the "Hide" button, I will disappear.</p>
+
+    <div class="one">this is first div</div>
+    <div class="two">this is second div</div>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+  </body>
+</html>
