@@ -65,7 +65,17 @@
                         $(function(){
                             //save data
                             $("#save").click(function(){
-                                    var email=$("e")
+                                    var email=$("#ema").val();
+                                    var password=$("pass");
+                                    $.ajax({
+                                        url:"ajaxdata/crud_data.php",
+                                        type:"post",
+                                        data:({
+                                            "saveemail":email,"pass":pass}),
+                                            success:function(data){
+                                                $(".result").html(data);
+                                            }
+                                    })
                             });
                                 
                          
