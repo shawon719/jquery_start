@@ -44,6 +44,32 @@
                 <th>pass</th>
             </tr>
         </thead>
+        <tbody id="data">
+            <?php
+                    $data=$db->query("select * from user");
+                    while(list($_id,$_pass,$_email)=$data->fetch_row()){
+                        echo "<tr>
+                                <td>$_id</td>
+                                <td>$_pass</td>
+                                <td>$_email</td>
+                        </tr>";
+                    }
+            ?>
+        </tbody>
     </table>
+
+    <!-- javascript -->
+
+                    <script src="./js/jquery-3.7.1.min.js"></script>
+                    <script type="text/javascript">
+                        $(function(){
+                            //save data
+                            $("#save").click(function(){
+                                    var email=$("e")
+                            });
+                                
+                         
+                        });
+                    </script>
 </body>
 </html>
